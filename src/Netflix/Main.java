@@ -10,6 +10,9 @@ public class Main {
     String strUsername;
     String strPassword;
     String strUserInput = "";
+    String strUserItemInput;
+
+    Boolean isNetflixOn = true;
 
     System.out.println("");
     System.out.println(" *   *");
@@ -22,7 +25,7 @@ public class Main {
     System.out.print("Password: ");
     strPassword = keyboard.readLine();
 
-    WatchedList UserList = new WatchedList(Arrays.asList(""));
+    WatchedList UserList = new WatchedList(new ArrayList<Item>());
     Account userAccount = new Account(strUsername, strPassword, UserList);
 
     Movie Titanic = new Movie("Titanic", "Romance", "Hi", 1990, 9.00);
@@ -35,23 +38,35 @@ public class Main {
     Movies.add(StarWars);
 
 
-    while(strUserInput.equals("")) {
-      System.out.println("\n[My list] [Netflix Items] [Account Details]");
+    while(isNetflixOn == true) {
+      System.out.println("");
+      System.out.println("---------------------------------------------");
+      System.out.println("[My List] [Netflix Items] [Account Details]");
+      System.out.println("---------------------------------------------");
       strUserInput = keyboard.readLine();
+      System.out.println("---------------------------------------------");
       switch (strUserInput) {
         case "My List":
-          System.out.println("Current List: " + UserList.getWatchedList());
-          System.out.println("\nDo you want to add any items to your watched list?");
+          System.out.println("\nCurrent List: " + userAccount.getList());
+          System.out.print("\nWhat items do you want to add to your watched list? ");
+          strUserItemInput = keyboard.readLine();
+          UserList.AddingItem(strUserItemInput, Movies);
+          System.out.println("\nCurrent List: " + userAccount.getList());
           break;
+
         case "Netflix Items":
           System.out.println("\nNetflix Movies: \n" + Movies);
           break;
+
         case "Account Details":
           System.out.println("Username: " + userAccount.getUsername());
           System.out.println("Password: " + userAccount.getPassword());
           break;
+        
         default:
-          strUserInput = "";
+          isNetflixOn = false;
+          System.out.println("Logging off...");
+          System.out.println("---------------------------------------------");
       }
     }
   }

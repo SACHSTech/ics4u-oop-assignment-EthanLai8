@@ -23,4 +23,8 @@ public class Account {
   public String getPassword() {
     return strPassword;
   }
+
+  public ArrayList<Item> getList() {
+    return myList.getWatchedList();
+  }
 }
