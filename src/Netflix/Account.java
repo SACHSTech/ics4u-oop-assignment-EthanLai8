@@ -1,19 +1,26 @@
 package Netflix;
 
-public class Account {
-  private String strEmail;
-  private String strPassword;
+import java.io.*;
+import java.util.*;
 
-  public Account(String strEmail, String strPassword) {
-    this.strEmail = strEmail;
+public class Account {
+  private String strUsername;
+  private String strPassword;
+  private WatchedList myList;
+
+  // WatchedList myList = new WatchedList(Arrays.asList(""));
+
+  public Account(String strUsername, String strPassword, WatchedList myList) {
+    this.strUsername = strUsername;
     this.strPassword = strPassword;
+    this.myList = myList;
   }
 
-  public String getEmail() {
-    return this.strEmail;
+  public String getUsername() {
+    return strUsername;
   }
 
   public String getPassword() {
-    return this.strPassword;
+    return strPassword;
   }
 }
