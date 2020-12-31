@@ -31,17 +31,23 @@ public class Main {
     // Creating Show Objects
     Item StrangerThings = new Show("Stranger Things", "Horror", "Matt Duffer", 2016, 8.70, 8);
     Item Berserk = new Show("Berserk", "Action", "Kentaro Miura", 1988, 9.35, 25);
+    Item HunterxHunter = new Show("Hunter X Hunter", "Action", "Yoshihiro Togashi", 2011, 9.11, 148);
 
     // Creating Movie Objects
     Item Titanic = new Movie("Titanic", "Romance", "James Cameron", 1997, 7.80);
     Item StarWars = new Movie("Star Wars: Episode III", "Sci-Fi", "George Lucas", 2005, 7.50);
-    Item FallingDown = new Movie("Falling Down", "Sci-Fi", "George Lucas", 2005, 7.50);
+    Item FallingDown = new Movie("Falling Down", "Comedy", "Joel Schumacher", 2005, 7.60);
+    Item YourName = new Movie("Your Name", "Romance", "Makoto Shinkai", 2016, 8.40);
 
     ArrayList<Item> Database = new ArrayList<>();
     Database.add(StrangerThings);
     Database.add(Berserk);
+    Database.add(HunterxHunter);
+
     Database.add(Titanic);
     Database.add(StarWars);
+    Database.add(FallingDown);
+    Database.add(YourName);
 
     while(isNetflixOn == true) {
       System.out.println("");
