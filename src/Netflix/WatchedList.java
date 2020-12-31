@@ -48,14 +48,31 @@ public class WatchedList {
       }
     }
     for (int i = 0; i < intGenreCount.length; i++) {
-      if (intGenreCount[i] > intMax)
+      if (intGenreCount[i] > intMax) {
+        intMax = intGenreCount[i];
+      }
     }
-  }
-
-  public void Test(ArrayList<Item> Database) {
     for(Item Z : Database) {
-      if(Z.getGenre().equalsIgnoreCase("Action")) {
-        System.out.println(Z);
+      if (intMax == intGenreCount[0]) {
+        if(Z.getGenre().equalsIgnoreCase("Action")) {
+          System.out.println(Z);
+        }
+      } else if (intMax == intGenreCount[1]) {
+        if(Z.getGenre().equalsIgnoreCase("Comedy")) {
+          System.out.println(Z);
+        }
+      } else if (intMax == intGenreCount[2]) {
+        if(Z.getGenre().equalsIgnoreCase("Horror")) {
+          System.out.println(Z);
+        }
+      } else if (intMax == intGenreCount[3]) {
+        if(Z.getGenre().equalsIgnoreCase("Romance")) {
+          System.out.println(Z);
+        }
+      } else if (intMax == intGenreCount[4]) {
+        if(Z.getGenre().equalsIgnoreCase("Sci-Fi")) {
+          System.out.println(Z);
+        }
       }
     }
   }
