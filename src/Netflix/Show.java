@@ -7,4 +7,7 @@ public class Show extends Item {
     super(strName, strGenre, strDirector, intYear, dblRating);
     this.intEpisodes = intEpisodes;
   }
+  public String toString() {
+    return "\n[Show: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating " + getRating() + ", Episodes: " + intEpisodes + "]";
+  }
 }

@@ -28,11 +28,14 @@ public class Main {
     WatchedList UserList = new WatchedList(new ArrayList<Item>());
     Account userAccount = new Account(strUsername, strPassword, UserList);
 
-    // Creating Item objects
+    // Creating Show Objects
     Item StrangerThings = new Show("Stranger Things", "Horror", "Matt Duffer", 2016, 8.70, 8);
     Item Berserk = new Show("Berserk", "Action", "Kentaro Miura", 1988, 9.35, 25);
+
+    // Creating Movie Objects
     Item Titanic = new Movie("Titanic", "Romance", "James Cameron", 1997, 7.80);
     Item StarWars = new Movie("Star Wars: Episode III", "Sci-Fi", "George Lucas", 2005, 7.50);
+    Item FallingDown = new Movie("Falling Down", "Sci-Fi", "George Lucas", 2005, 7.50);
 
     ArrayList<Item> Database = new ArrayList<>();
     Database.add(StrangerThings);

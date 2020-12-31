@@ -23,7 +23,15 @@ public class Item {
     return strGenre;
   }
 
-  public String toString() {
-    return "\nName: " + strName + "\nGenre: " + strGenre + "\nRating: " + dblRating + "\n";
+  public String getDirector() {
+    return strDirector;
+  }
+
+  public int getYear() {
+    return intYear;
+  }
+
+  public double getRating() {
+    return dblRating;
   }
 }
