@@ -18,6 +18,11 @@ public class Item {
   public String getName() {
     return strName;
   }
+
+  public String getGenre() {
+    return strGenre;
+  }
+
   public String toString() {
     return "\nName: " + strName + "\nGenre: " + strGenre + "\nRating: " + dblRating + "\n";
   }

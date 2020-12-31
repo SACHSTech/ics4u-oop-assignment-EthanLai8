@@ -28,37 +28,44 @@ public class Main {
     WatchedList UserList = new WatchedList(new ArrayList<Item>());
     Account userAccount = new Account(strUsername, strPassword, UserList);
 
-    Movie Titanic = new Movie("Titanic", "Romance", "Hi", 1990, 9.00);
-    Movie StarWars = new Movie("Star Wars", "Sci-Fi", "Lucas", 2003, 8.50);
-    Movie Berserk = new Movie("Berserk", "Action", "Miura", 2003, 9.50);
+    // Creating Item objects
+    Item StrangerThings = new Show("Stranger Things", "Horror", "Matt Duffer", 2016, 8.70, 8);
+    Item Berserk = new Show("Berserk", "Action", "Kentaro Miura", 1988, 9.35, 25);
+    Item Titanic = new Movie("Titanic", "Romance", "James Cameron", 1997, 7.80);
+    Item StarWars = new Movie("Star Wars: Episode III", "Sci-Fi", "George Lucas", 2005, 7.50);
 
-    ArrayList<Movie> Movies = new ArrayList<>();
-    Movies.add(Titanic);
-    Movies.add(Berserk);
-    Movies.add(StarWars);
-
+    ArrayList<Item> Database = new ArrayList<>();
+    Database.add(StrangerThings);
+    Database.add(Berserk);
+    Database.add(Titanic);
+    Database.add(StarWars);
 
     while(isNetflixOn == true) {
       System.out.println("");
       System.out.println("---------------------------------------------");
-      System.out.println("[My List] [Netflix Items] [Account Details]");
+      System.out.println("[(M)y List] [(D)atabase] [(R)ecommendations] [(A)ccount Details]");
       System.out.println("---------------------------------------------");
       strUserInput = keyboard.readLine();
       System.out.println("---------------------------------------------");
       switch (strUserInput) {
-        case "My List":
+        case "M":
           System.out.println("\nCurrent List: " + userAccount.getList());
           System.out.print("\nWhat items do you want to add to your watched list? ");
           strUserItemInput = keyboard.readLine();
-          UserList.AddingItem(strUserItemInput, Movies);
+          UserList.AddingItem(strUserItemInput, Database);
           System.out.println("\nCurrent List: " + userAccount.getList());
           break;
 
-        case "Netflix Items":
-          System.out.println("\nNetflix Movies: \n" + Movies);
+        case "D":
+          System.out.println("\nNetflix Database: \n" + Database);
           break;
 
-        case "Account Details":
+        case "R":
+          System.out.println("\nYour Recommendations:");
+          UserList.Recommendations(Database);
+          break;
+        case "A":
+          System.out.println("");
           System.out.println("Username: " + userAccount.getUsername());
           System.out.println("Password: " + userAccount.getPassword());
           break;
