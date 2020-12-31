@@ -6,6 +6,6 @@ public class Movie extends Item {
     super(strName, strGenre, strDirector, intYear, dblRating);
   }
   public String toString() {
-    return "\n[Movie: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating " + getRating() + "]";
+    return "\n[Movie: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + "]";
   }
 }
