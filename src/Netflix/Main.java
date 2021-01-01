@@ -56,13 +56,13 @@ public class Main {
     Item HunterxHunter = new Show("Hunter X Hunter", "Action", "Yoshihiro Togashi", 2011, 9.11, 148, "Finished");
 
     // Creating Movie Objects
-    Item Titanic = new Movie("Titanic", "Romance", "James Cameron", 1997, 7.80);
-    Item StarWars = new Movie("Star Wars Trilogy", "Sci-Fi", "George Lucas", 2005, 7.50);
-    Item FallingDown = new Movie("Falling Down", "Comedy", "Joel Schumacher", 2005, 7.60);
-    Item YourName = new Movie("Your Name", "Romance", "Makoto Shinkai", 2016, 8.40);
-    Item LordOfTheRings = new Movie("Lord Of The Rings Trilogy", "Action", "Peter Jackson", 2001, 8.80);
-    Item TheThing = new Movie("The Thing", "Horror", "John Carpenter", 1982, 8.10);
-    Item TheConjuring = new Movie("The Conjuring", "Horror", "James Wan", 2013, 7.50);
+    Item Titanic = new Movie("Titanic", "Romance", "James Cameron", 1997, 7.80, 2.67);
+    Item StarWars = new Movie("Star Wars Trilogy", "Sci-Fi", "George Lucas", 2005, 7.50, 6.8);
+    Item FallingDown = new Movie("Falling Down", "Comedy", "Joel Schumacher", 2005, 7.60, 1.89);
+    Item YourName = new Movie("Your Name", "Romance", "Makoto Shinkai", 2016, 8.40, 1.87);
+    Item LordOfTheRings = new Movie("Lord Of The Rings Trilogy", "Action", "Peter Jackson", 2001, 8.80, 11.7);
+    Item TheThing = new Movie("The Thing", "Horror", "John Carpenter", 1982, 8.10, 1.82);
+    Item TheConjuring = new Movie("The Conjuring", "Horror", "James Wan", 2013, 7.50, 1.87);
 
     // Adding the movie and show objects into an arraylist
     ArrayList<Item> Database = new ArrayList<>();

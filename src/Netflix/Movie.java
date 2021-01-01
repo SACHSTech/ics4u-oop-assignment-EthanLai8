@@ -34,7 +34,7 @@ public class Movie extends Item {
   *
   * @param dblDuration - a double
   */
-  public void setDuration(String dblDuration) {
+  public void setDuration(double dblDuration) {
     this.dblDuration = dblDuration;
   }
 
@@ -44,6 +44,6 @@ public class Movie extends Item {
   * @return a String
   */
   public String toString() {
-    return "\n[Movie: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + "]";
+    return "\n[Movie: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + ", Duration: " + dblDuration + "h]";
   }
 }
