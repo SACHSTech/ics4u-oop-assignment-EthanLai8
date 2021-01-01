@@ -3,7 +3,7 @@
 
 [*see instructions for details*](Instructions.md)
 
-<img src="https://github.com/SACHSTech/ics4u-oop-assignment-Ethanlai8/blob/main/src/Netflix%Class%Diagram.png">
+<img src="https://github.com/SACHSTech/ics4u-oop-assignment-Ethanlai8/blob/main/src/ClassDiagram.png">
 
 ## Summary
 *Include a brief summary that describes your system that your are modelling*
