@@ -15,11 +15,13 @@ public class Main {
     Boolean isNetflixOn = true;
     Boolean isAddingToList;
 
-    System.out.println("");
-    System.out.println(" *   *");
-    System.out.println(" * * *");
-    System.out.println(" *  **");
-    System.out.println(" *   *");
+    System.out.println(" Please extend console to full screen...");
+    System.out.println(" ___      ___  ________   ___________  __________  ___  __________ __    __                ");
+    System.out.println(" | |\\\\    | | |  ______| |           | |  _______| | |  |        | \\ \\  / /            ");
+    System.out.println(" | | \\\\   | | | |______  |___     ___| | |_______  | |  |__    __|  \\ \\/ /             ");
+    System.out.println(" | |  \\\\  | | | _______|     |   |     |  _______| | |   __|  |__    \\ \\/              ");
+    System.out.println(" | |   \\\\ | | | |______      |   |     | |         | |  |        |   /\\ \\              ");
+    System.out.println(" |_|    \\\\|_| |________|     |___|     |_|         |_|  |________| _/_/\\_\\_             ");
 
     System.out.print("\nUsername: ");
     strUsername = keyboard.readLine();
@@ -63,11 +65,11 @@ public class Main {
     while(isNetflixOn == true) {
       isAddingToList = true;
       System.out.println("");
-      System.out.println("---------------------------------------------");
-      System.out.println("[(M)y List] [(D)atabase] [(R)ecommendations] [(A)ccount Details]");
-      System.out.println("---------------------------------------------");
+      System.out.println("-------------------------------------------------------------------------");
+      System.out.println("[My List] [Database] [Recommendations] [Account Details]");
+      System.out.println("\nType the first letter of the desired location to continue (e.g M) \nType anything else to log off");
+      System.out.println("-------------------------------------------------------------------------");
       strUserInput = keyboard.readLine();
-      System.out.println("---------------------------------------------");
       switch (strUserInput) {
         case "M":
           System.out.println("\nCurrent List: " + userAccount.getList());
@@ -76,6 +78,7 @@ public class Main {
             strUserItemInput = keyboard.readLine();
             if (strUserItemInput.equalsIgnoreCase("")) {
               isAddingToList = false;
+              System.out.println("\nNew List: " + userAccount.getList());
             } else {
               UserList.AddingItem(strUserItemInput, Database);
             }
@@ -98,6 +101,7 @@ public class Main {
         
         default:
           isNetflixOn = false;
+          System.out.println("---------------------------------------------");
           System.out.println("Logging off...");
           System.out.println("---------------------------------------------");
       }

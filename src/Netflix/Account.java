@@ -15,7 +15,8 @@ public class Account {
     this.strPassword = strPassword;
     this.myList = myList;
   }
-
+  
+  // Getter Methods
   public String getUsername() {
     return strUsername;
   }
@@ -27,4 +28,6 @@ public class Account {
   public ArrayList<Item> getList() {
     return myList.getWatchedList();
   }
+
+  // Setter Methods
 }
