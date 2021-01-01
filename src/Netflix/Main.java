@@ -49,11 +49,11 @@ public class Main {
     Account userAccount = new Account(strUsername, strPassword, UserList);
 
     // Creating Show Objects
-    Item StrangerThings = new Show("Stranger Things", "Horror", "Matt Duffer", 2016, 8.70, 8);
-    Item Berserk = new Show("Berserk", "Action", "Kentaro Miura", 1988, 9.35, 25);
-    Item Clannad = new Show("Clannad", "Romance", "Tatsuya Ishihara", 2008, 8.96, 47);
-    Item SteinsGate = new Show("Steins Gate", "Sci-Fi", "Hamasaki Hiroshi", 2011, 9.12, 24);
-    Item HunterxHunter = new Show("Hunter X Hunter", "Action", "Yoshihiro Togashi", 2011, 9.11, 148);
+    Item StrangerThings = new Show("Stranger Things", "Horror", "Matt Duffer", 2016, 8.70, 8, "Finished");
+    Item Berserk = new Show("Berserk", "Action", "Kentaro Miura", 1988, 9.35, 25, "Airing");
+    Item Clannad = new Show("Clannad", "Romance", "Tatsuya Ishihara", 2008, 8.96, 47, "Finished");
+    Item SteinsGate = new Show("Steins Gate", "Sci-Fi", "Hamasaki Hiroshi", 2011, 9.12, 24, "Finished");
+    Item HunterxHunter = new Show("Hunter X Hunter", "Action", "Yoshihiro Togashi", 2011, 9.11, 148, "Finished");
 
     // Creating Movie Objects
     Item Titanic = new Movie("Titanic", "Romance", "James Cameron", 1997, 7.80);
