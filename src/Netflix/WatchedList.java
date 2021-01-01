@@ -13,8 +13,14 @@ public class WatchedList {
     this.myList = myList;
   }
   
+  // Getter Method
   public ArrayList<Item> getWatchedList() {
     return myList;
+  }
+
+  // Setter Method
+  public void setWatchedList(ArrayList<Item> myList) {
+    this.myList = myList;
   }
 
   public void AddingItem(String strUserItemInput, ArrayList<Item> Database) {
