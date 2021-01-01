@@ -12,22 +12,39 @@ public class WatchedList {
   private int intMax;
   private boolean isItemInList;
 
-  // Constructor for User's watched list
+  /**
+  * WatchedList constructor. Creates an instance of the object, WatchedList. An aggregation of the object, Account.
+  *
+  * @param myList - an Arraylist that contains only Item objects
+  */	
   public WatchedList(ArrayList<Item> myList) {
     this.myList = myList;
   }
   
-  // Getter Method
+  /**
+  * Getter method that returns the watched list's arraylist contents
+  *
+  * @return myList - an arraylist that contains Item objects
+  */	
   public ArrayList<Item> getWatchedList() {
     return myList;
   }
 
-  // Setter Method
+  /**
+  * Setter method which allows the user to modify the watched list's arraylist
+  *
+  * @param myList - an arraylist that contains Item objects
+  */	
   public void setWatchedList(ArrayList<Item> myList) {
     this.myList = myList;
   }
 
-  // Method that adds an item to the user's watched list
+  /**
+  * A method that adds an item to the user's watched list
+  *
+  * @param strUserItemInput - a string that comes from the user's inputs.
+  * @param Database - an arraylist that contains Item objects. This arraylist contains every movie and show available.
+  */	
   public void AddingItem(String strUserItemInput, ArrayList<Item> Database) {
 
     // Intializing instance variables
@@ -73,7 +90,11 @@ public class WatchedList {
     }
   }
 
-  // Method that checks which genre is most common in the user's watched list. Then lists all objects in the database with the same genre.
+  /**
+  * A method that checks which genre is most common in the user's watched list. Then lists all objects in the database with the same genre.
+  *
+  * @param Database - an arraylist that contains Item objects. This arraylist contains every movie and show available.
+  */	
   public void Recommendations(ArrayList<Item> Database) {
 
     // Intializing instance variables
