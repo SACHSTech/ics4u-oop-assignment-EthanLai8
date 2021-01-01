@@ -1,12 +1,15 @@
 package Netflix;
 
 public class Item {
+
+  // Instance variables
   private String strName;
   private String strGenre;
   private String strDirector;
   private int intYear;
   private double dblRating;
 
+  // Item constructor
   public Item(String strName, String strGenre, String strDirector, int intYear, double dblRating) {
     this.strName = strName;
     this.strGenre = strGenre;
