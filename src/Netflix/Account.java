@@ -8,8 +8,6 @@ public class Account {
   private String strPassword;
   private WatchedList myList;
 
-  // WatchedList myList = new WatchedList(Arrays.asList(""));
-
   public Account(String strUsername, String strPassword, WatchedList myList) {
     this.strUsername = strUsername;
     this.strPassword = strPassword;
@@ -30,4 +28,15 @@ public class Account {
   }
 
   // Setter Methods
+  public void setUsername(String strUsername) {
+    this.strUsername = strUsername;
+  }
+
+  public void setPassword(String strPassword) {
+    this.strPassword = strPassword;
+  }
+
+  public void setList(WatchedList myList) {
+    this.myList = myList;
+  }
 }

@@ -15,6 +15,7 @@ public class Item {
     this.dblRating = dblRating;
   }
 
+  // Getter Methods
   public String getName() {
     return strName;
   }
@@ -33,5 +34,26 @@ public class Item {
 
   public double getRating() {
     return dblRating;
+  }
+
+  // Setter Methods
+  public void setName(String strName) {
+    this.strName = strName;
+  }
+
+  public void setGenre(String strGenre) {
+    this.strGenre = strGenre;
+  }
+
+  public void setDirector(String strDirector) {
+    this.strDirector = strDirector;
+  }
+
+  public void setYear(int intYear) {
+    this.intYear = intYear;
+  }
+
+  public void setRating(double dblRating) {
+    this.dblRating = dblRating;
   }
 }
