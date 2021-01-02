@@ -81,7 +81,7 @@ public class Main {
     Database.add(TheConjuring);
 
     // While loop to allow the program to keep on repeating as long as a boolean is true
-    while(isNetflixOn == true) {
+    while (isNetflixOn == true) {
 
       // Initializing a boolean which allows the program to keep on asking the user if they want to add more items to their list
       isAddingToList = true;
@@ -98,13 +98,13 @@ public class Main {
 
       // Switch statement that detects what the user input is and accesses the user's desired section of the program.
       switch (strUserInput.toLowerCase()) {
-        case "m":
+        case "m" :
 
           // Gets the user's current watched list using a method from the Account class
           System.out.println("\nCurrent Watched List: \n" + userAccount.getList());
 
           // While loop that continuously asks the user if they want to add a new item to their list if a boolean is true.
-          while(isAddingToList == true) {
+          while (isAddingToList == true) {
             System.out.print("\nWhat items do you want to add to your watched list? (Press enter to leave) ");
             strUserItemInput = keyboard.readLine();
 
@@ -114,26 +114,26 @@ public class Main {
               System.out.println("\nNew Watched List: \n" + userAccount.getList());
             
             // If the user types anything, it triggers a method from the WatchedList class. This method checks if the user's string matches any object from the database and adds it to the user's watched list.
-            } else {
+            }else {
               UserList.AddingItem(strUserItemInput, Database);
             }
           }
           break;
 
-        case "d":
+        case "d" :
 
           // Prints out the arraylist which contains every movie and show in the database
           System.out.println("\nNetflix Database: \n" + Database);
           break;
 
-        case "r":
+        case "r" :
           System.out.println("\nYour Recommendations (Based on common genres from your list):");
 
           // Triggers a method from the WatchedList class. This method sorts the user's watched list and counts their most watched genre. Then, it sorts the database arraylist and displays every object with that genre.
           UserList.Recommendations(Database);
           break;
 
-        case "a":
+        case "a" :
           System.out.println("");
 
           // Triggers a method from the Account class which gets the user's current username and password
@@ -159,7 +159,7 @@ public class Main {
           }
           break;
         
-        default:
+        default :
 
           // Turns a boolean off which prevents the program from running again
           isNetflixOn = false;
