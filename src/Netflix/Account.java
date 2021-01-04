@@ -1,3 +1,8 @@
+/**
+* ICS4U OOP Assignment
+* @author: E. Lai
+*/
+
 package Netflix;
 
 import java.io.*;
