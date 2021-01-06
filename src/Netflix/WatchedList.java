@@ -50,7 +50,7 @@ public class WatchedList {
   * @param strUserItemInput - a string that comes from the user's inputs.
   * @param Database - an arraylist that contains Item objects. This arraylist contains every movie and show available.
   */	
-  public void AddingItem(String strUserItemInput, ArrayList<Item> Database) {
+  public void addingItem(String strUserItemInput, ArrayList<Item> Database) {
 
     // Intializing instance variables
     intCheck = 0;
@@ -100,7 +100,7 @@ public class WatchedList {
   *
   * @param Database - an arraylist that contains Item objects. This arraylist contains every movie and show available.
   */	
-  public void Recommendations(ArrayList<Item> Database) {
+  public void recommendations(ArrayList<Item> Database) {
 
     // Intializing instance variables
     intGenreCount = new int[] {0, 0, 0, 0, 0};

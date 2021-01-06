@@ -200,7 +200,7 @@ public class Main {
             
             // If the user types anything, it triggers a method from the WatchedList class. This method checks if the user's string matches any object from the database and adds it to the user's watched list.
             }else {
-              UserList.AddingItem(strUserItemInput, Database);
+              UserList.addingItem(strUserItemInput, Database);
             }
           }
           sleep(1);
@@ -222,7 +222,7 @@ public class Main {
           // Triggers a method from the WatchedList class. This method sorts the user's watched list and counts their most watched genre. Then, it sorts the database arraylist and displays every object with that genre.
           System.out.println(String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
           System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-          UserList.Recommendations(Database);
+          UserList.recommendations(Database);
           sleep(1);
           break;
 
