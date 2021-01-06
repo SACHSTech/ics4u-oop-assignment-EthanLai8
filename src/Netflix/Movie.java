@@ -32,7 +32,7 @@ public class Movie extends Item {
   *
   * @return intDuration - the duration of the movie in minutes
   */
-  public double getDuration() {
+  public int getDuration() {
     return intDuration;
   }
 
