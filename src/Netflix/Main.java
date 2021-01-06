@@ -88,6 +88,7 @@ public class Main {
     String strUserItemInput;
     String strUserChangedPass;
     String strUserChangedUser;
+    String StringDatabase;
     Boolean isNetflixOn;
     Boolean isAddingToList;
 
@@ -113,6 +114,9 @@ public class Main {
     Item Berserk = new Show("Berserk", "Action", "Kentaro Miura", 1988, 9.35, 25, "Airing");
     Item Clannad = new Show("Clannad", "Romance", "Tatsuya Ishihara", 2008, 8.96, 47, "Finished");
     Item SteinsGate = new Show("Steins Gate", "Sci-Fi", "Hamasaki Hiroshi", 2011, 9.12, 24, "Finished");
+    Item Texhnolyze = new Show("Texhnolyze", "Sci-Fi", "Yasuyuki Ueda", 2003, 7.76, 22, "Finished");
+    Item CobraKai = new Show("Cobra Kai", "Action", "Jon Hurwitz", 2018, 8.7, 32, "Airing");
+    Item FamilyGuy = new Show("Family Guy", "Comedy", "Seth MacFarlane", 1999, 8.1, 364, "Airing");
     Item HunterxHunter = new Show("Hunter X Hunter", "Action", "Yoshihiro Togashi", 2011, 9.11, 148, "Finished");
 
     // Creating Movie Objects
@@ -123,6 +127,11 @@ public class Main {
     Item LordOfTheRings = new Movie("Lord Of The Rings Trilogy", "Action", "Peter Jackson", 2001, 8.80, 702);
     Item TheThing = new Movie("The Thing", "Horror", "John Carpenter", 1982, 8.10, 109);
     Item TheConjuring = new Movie("The Conjuring", "Horror", "James Wan", 2013, 7.50, 112);
+    Item ForrestGump = new Movie("Forrest Gump", "Romance", "Robert Zemeckis", 1994, 8.80, 142);
+    Item SpiritedAway = new Movie("Spirited Away", "Horror", "Hayao Miyazaki", 2001, 8.60, 125);
+    Item Inception = new Movie("Inception", "Sci-Fi", "Christopher Nolan", 2010, 8.80, 148);
+    Item ThePlatform = new Movie("The Platform", "Horror", "Galder Urrutia", 2019, 7.0, 94);
+    Item Saw = new Movie("Saw", "Horror", "James Wan", 2004, 7.6, 103);
 
     // Adding the movie and show objects into an arraylist
     ArrayList<Item> Database = new ArrayList<>();
@@ -130,6 +139,9 @@ public class Main {
     Database.add(Berserk);
     Database.add(SteinsGate);
     Database.add(Clannad);
+    Database.add(Texhnolyze);
+    Database.add(CobraKai);
+    Database.add(FamilyGuy);
     Database.add(HunterxHunter);
 
     Database.add(Titanic);
@@ -139,8 +151,14 @@ public class Main {
     Database.add(LordOfTheRings);
     Database.add(TheThing);
     Database.add(TheConjuring);
+    Database.add(ForrestGump);
+    Database.add(SpiritedAway);
+    Database.add(Inception);
+    Database.add(ThePlatform);
+    Database.add(Saw);
 
-    String StringDatabase = (Arrays.toString(Database.toArray())).replace("[", " ").replace("]", "").replace(",", "");
+    // Creating a string version of the arraylist, Database. This version lacks the commas and square brackets.
+    StringDatabase = (Arrays.toString(Database.toArray())).replace("[", " ").replace("]", "").replace(",", "");
 
     // While loop to allow the program to keep on repeating as long as a boolean is true
     while (isNetflixOn == true) {
@@ -155,11 +173,12 @@ public class Main {
       strUserInput = keyboard.readLine();
 
       // Switch statement that detects what the user input is and accesses the user's desired section of the program.
-      switch (strUserInput.toLowerCase()) {
+      switch (strUserInput.toLowerCase()) {  
+
         case "m" :
+          System.out.println("\nCurrent Watched List: \n");
 
           // Gets the user's current watched list using a method from the Account class
-          System.out.println("\nCurrent Watched List: \n");
           System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
           System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
           System.out.println(userAccount.getList());
@@ -188,9 +207,9 @@ public class Main {
           break;
 
         case "d" :
+          System.out.println("\nNetflix Database: \n");
 
           // Prints out the arraylist which contains every movie and show in the database
-          System.out.println("\nNetflix Database: \n");
           System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
           System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
           System.out.println(StringDatabase);
@@ -200,9 +219,9 @@ public class Main {
         case "r" :
           System.out.println("\nYour Recommendations (Based on common genres from your list):\n");
 
+          // Triggers a method from the WatchedList class. This method sorts the user's watched list and counts their most watched genre. Then, it sorts the database arraylist and displays every object with that genre.
           System.out.println(String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
           System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-          // Triggers a method from the WatchedList class. This method sorts the user's watched list and counts their most watched genre. Then, it sorts the database arraylist and displays every object with that genre.
           UserList.Recommendations(Database);
           sleep(1);
           break;
