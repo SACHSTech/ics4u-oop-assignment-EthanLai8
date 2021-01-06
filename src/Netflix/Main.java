@@ -7,6 +7,7 @@ package Netflix;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
@@ -19,7 +20,61 @@ public class Main {
   */
   public static String format(String strFormat, Object... args) {  
     return new Formatter().format(strFormat, args).toString();  
+  }
+  
+  /**
+  * Prints the title.
+  *
+  * @return void
+  */
+  public static void title() {
+    System.out.println("\n Please extend console to full screen...");
+    sleep(2);
+    System.out.println(" ___   ___  ________   ___________  __________  ___  __________ ___    ___              ");
+    System.out.println(" |  \\  | | |  ______| |           | |  _______| | |  |        | \\  \\  /  /           ");
+    System.out.println(" |   \\ | | | |______  |___     ___| | |_______  | |  |__    __|  \\  \\/  /            ");
+    System.out.println(" | |\\ \\| | | _______|     |   |     |  _______| | |   __|  |__    \\    /             ");
+    System.out.println(" | | \\   | | |______      |   |     | |         | |  |        |   /    \\              ");
+    System.out.println(" |_|  \\ _| |________|     |___|     |_|         |_|  |________|  /__/\\__\\            ");
   }  
+
+  /**
+  * Prints the log off info.
+  *
+  * @return void
+  */
+  public static void logoff() {
+    System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("Logging off...");
+    System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+  }
+
+  /**
+  * Prints the main menu.
+  *
+  * @return void
+  */
+  public static void mainmenu() {
+    System.out.println("\n--------------------------------------------------------------------------------------------------------------------------------------");
+    System.out.println("[My List] [Database] [Recommendations] [Account Details]");
+    System.out.println("\nType the first letter of the desired location to continue (e.g M) \nType anything else to log off");
+    System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+  }
+
+  /**
+  * Allows the program to pause for a set amount of time.
+  *
+  * @param intSec - the time in seconds that the program pauses for. An integer.
+  * @return void
+  */
+  public static void sleep(int intSec) {
+    try { 
+      TimeUnit.SECONDS.sleep(intSec);
+    }
+    catch (InterruptedException e) { 
+        System.out.println(e);
+    } 
+  }
   
   public static void main(String[] args) throws IOException {
     
@@ -41,13 +96,7 @@ public class Main {
     strUserInput = "";
 
     // Title screen
-    System.out.println(" Please extend console to full screen...");
-    System.out.println(" ___   ___  ________   ___________  __________  ___  __________ ___    ___               ");
-    System.out.println(" |  \\  | | |  ______| |           | |  _______| | |  |        | \\  \\  /  /            ");
-    System.out.println(" |   \\ | | | |______  |___     ___| | |_______  | |  |__    __|  \\  \\/  /            ");
-    System.out.println(" | |\\ \\| | | _______|     |   |     |  _______| | |   __|  |__    \\    /              ");
-    System.out.println(" | | \\   | | |______      |   |     | |         | |  |        |   /    \\              ");
-    System.out.println(" |_|  \\ _| |________|     |___|     |_|         |_|  |________|  /__/\\__\\             ");
+    title();
 
     // Asking for user input for their account's username and password
     System.out.print("\nUsername: ");
@@ -100,12 +149,8 @@ public class Main {
       isAddingToList = true;
 
       // Prints instructions to the screen
-      System.out.println("");
-      System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-      System.out.println("[My List] [Database] [Recommendations] [Account Details]");
-      System.out.println("\nType the first letter of the desired location to continue (e.g M) \nType anything else to log off");
-      System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-      
+      mainmenu();
+
       // Reads user input. User input determines which section of the program they want to access.
       strUserInput = keyboard.readLine();
 
@@ -118,6 +163,7 @@ public class Main {
           System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
           System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
           System.out.println(userAccount.getList());
+          sleep(1);
 
           // While loop that continuously asks the user if they want to add a new item to their list if a boolean is true.
           while (isAddingToList == true) {
@@ -127,6 +173,7 @@ public class Main {
             // If the user types nothing, turns the boolean to false so the question will stop repeating. Also displays the User's watched list after their changes.
             if (strUserItemInput.equalsIgnoreCase("")) {
               isAddingToList = false;
+              sleep(1);
               System.out.println("\nNew Watched List: \n");
               System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
               System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
@@ -137,6 +184,7 @@ public class Main {
               UserList.AddingItem(strUserItemInput, Database);
             }
           }
+          sleep(1);
           break;
 
         case "d" :
@@ -146,6 +194,7 @@ public class Main {
           System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
           System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
           System.out.println(StringDatabase);
+          sleep(1);
           break;
 
         case "r" :
@@ -155,6 +204,7 @@ public class Main {
           System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
           // Triggers a method from the WatchedList class. This method sorts the user's watched list and counts their most watched genre. Then, it sorts the database arraylist and displays every object with that genre.
           UserList.Recommendations(Database);
+          sleep(1);
           break;
 
         case "a" :
@@ -187,9 +237,7 @@ public class Main {
 
           // Turns a boolean off which prevents the program from running again
           isNetflixOn = false;
-          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
-          System.out.println("Logging off...");
-          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+          logoff();
       }
     }
   }
