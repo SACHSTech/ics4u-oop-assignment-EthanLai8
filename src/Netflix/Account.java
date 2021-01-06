@@ -47,7 +47,7 @@ public class Account {
   }
 
   /**
-  * Getter method that returns the account's watched list
+  * Getter method that returns the account's watched list as a string
   *
   * @return String of myList.getWatchedList - a method from WatchedList class. Displays the string version of the arraylist of myList.
   */	

@@ -104,10 +104,10 @@ public class Main {
       System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
       System.out.println("[My List] [Database] [Recommendations] [Account Details]");
       System.out.println("\nType the first letter of the desired location to continue (e.g M) \nType anything else to log off");
-
+      System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+      
       // Reads user input. User input determines which section of the program they want to access.
       strUserInput = keyboard.readLine();
-      System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
       // Switch statement that detects what the user input is and accesses the user's desired section of the program.
       switch (strUserInput.toLowerCase()) {
