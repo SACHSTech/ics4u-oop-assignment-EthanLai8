@@ -5,6 +5,10 @@
 
 package Netflix;
 
+import Netflix.*;
+import java.io.*;
+import java.util.*;
+
 public class Item {
 
   // Instance variables

@@ -49,10 +49,10 @@ public class Account {
   /**
   * Getter method that returns the account's watched list
   *
-  * @return myList.getWatchedList - a method from WatchedList class. Displays the arraylist of myList
+  * @return String of myList.getWatchedList - a method from WatchedList class. Displays the string version of the arraylist of myList.
   */	
-  public ArrayList<Item> getList() {
-    return myList.getWatchedList();
+  public String getList() {
+    return Arrays.toString(myList.getWatchedList().toArray()).replace("[", " ").replace("]", "").replace(",", "");
   }
 
   /**

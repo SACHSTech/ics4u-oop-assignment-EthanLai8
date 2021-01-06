@@ -49,6 +49,8 @@ public class Movie extends Item {
   * @return a String
   */
   public String toString() {
-    return "\n[Movie: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + ", Duration: " + dblDuration + "h]";
+    //return "\n[Movie: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + ", Duration: " + dblDuration + "h]";
+
+    return String.format("|%10s |", "Movie") + String.format("%25s |", getName()) + String.format("%10s |", getGenre()) + String.format("%20s |", getDirector()) + String.format("%10s |", getYear()) + String.format("%10s |", getRating()) + String.format("%10s |", dblDuration) + String.format("%10s |", "N/A") + String.format("%10s |", "N/A") + "\n";
   }
 }

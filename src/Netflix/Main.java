@@ -9,8 +9,20 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-  public static void main(String[] args) throws IOException {
 
+  /**
+  * Static method that allows easy formatting for printing strings and numbers.
+  *
+  * @param strName - a string
+  * @param args - any variable
+  * @return Formatted String
+  */
+  public static String format(String strFormat, Object... args) {  
+    return new Formatter().format(strFormat, args).toString();  
+  }  
+  
+  public static void main(String[] args) throws IOException {
+    
     // Setting up Buffered reader for user input
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
@@ -30,12 +42,12 @@ public class Main {
 
     // Title screen
     System.out.println(" Please extend console to full screen...");
-    System.out.println(" ___      ___  ________   ___________  __________  ___  __________ __    __                ");
-    System.out.println(" | |\\\\    | | |  ______| |           | |  _______| | |  |        | \\ \\  / /            ");
-    System.out.println(" | | \\\\   | | | |______  |___     ___| | |_______  | |  |__    __|  \\ \\/ /             ");
-    System.out.println(" | |  \\\\  | | | _______|     |   |     |  _______| | |   __|  |__    \\ \\/              ");
-    System.out.println(" | |   \\\\ | | | |______      |   |     | |         | |  |        |   /\\ \\              ");
-    System.out.println(" |_|    \\\\|_| |________|     |___|     |_|         |_|  |________| _/_/\\_\\_            ");
+    System.out.println(" ___   ___  ________   ___________  __________  ___  __________ ___    ___               ");
+    System.out.println(" |  \\  | | |  ______| |           | |  _______| | |  |        | \\  \\  /  /            ");
+    System.out.println(" |   \\ | | | |______  |___     ___| | |_______  | |  |__    __|  \\  \\/  /            ");
+    System.out.println(" | |\\ \\| | | _______|     |   |     |  _______| | |   __|  |__    \\    /              ");
+    System.out.println(" | | \\   | | |______      |   |     | |         | |  |        |   /    \\              ");
+    System.out.println(" |_|  \\ _| |________|     |___|     |_|         |_|  |________|  /__/\\__\\             ");
 
     // Asking for user input for their account's username and password
     System.out.print("\nUsername: ");
@@ -79,6 +91,8 @@ public class Main {
     Database.add(TheThing);
     Database.add(TheConjuring);
 
+    String StringDatabase = (Arrays.toString(Database.toArray())).replace("[", " ").replace("]", "").replace(",", "");
+
     // While loop to allow the program to keep on repeating as long as a boolean is true
     while (isNetflixOn == true) {
 
@@ -87,20 +101,23 @@ public class Main {
 
       // Prints instructions to the screen
       System.out.println("");
-      System.out.println("-------------------------------------------------------------------------");
+      System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
       System.out.println("[My List] [Database] [Recommendations] [Account Details]");
       System.out.println("\nType the first letter of the desired location to continue (e.g M) \nType anything else to log off");
-      System.out.println("-------------------------------------------------------------------------");
 
       // Reads user input. User input determines which section of the program they want to access.
       strUserInput = keyboard.readLine();
+      System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
 
       // Switch statement that detects what the user input is and accesses the user's desired section of the program.
       switch (strUserInput.toLowerCase()) {
         case "m" :
 
           // Gets the user's current watched list using a method from the Account class
-          System.out.println("\nCurrent Watched List: \n" + userAccount.getList());
+          System.out.println("\nCurrent Watched List: \n");
+          System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
+          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+          System.out.println(userAccount.getList());
 
           // While loop that continuously asks the user if they want to add a new item to their list if a boolean is true.
           while (isAddingToList == true) {
@@ -110,7 +127,10 @@ public class Main {
             // If the user types nothing, turns the boolean to false so the question will stop repeating. Also displays the User's watched list after their changes.
             if (strUserItemInput.equalsIgnoreCase("")) {
               isAddingToList = false;
-              System.out.println("\nNew Watched List: \n" + userAccount.getList());
+              System.out.println("\nNew Watched List: \n");
+              System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
+              System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+              System.out.println(userAccount.getList());
             
             // If the user types anything, it triggers a method from the WatchedList class. This method checks if the user's string matches any object from the database and adds it to the user's watched list.
             }else {
@@ -122,12 +142,17 @@ public class Main {
         case "d" :
 
           // Prints out the arraylist which contains every movie and show in the database
-          System.out.println("\nNetflix Database: \n" + Database);
+          System.out.println("\nNetflix Database: \n");
+          System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
+          System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
+          System.out.println(StringDatabase);
           break;
 
         case "r" :
-          System.out.println("\nYour Recommendations (Based on common genres from your list):");
+          System.out.println("\nYour Recommendations (Based on common genres from your list):\n");
 
+          System.out.println(String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
+          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
           // Triggers a method from the WatchedList class. This method sorts the user's watched list and counts their most watched genre. Then, it sorts the database arraylist and displays every object with that genre.
           UserList.Recommendations(Database);
           break;
@@ -162,9 +187,9 @@ public class Main {
 
           // Turns a boolean off which prevents the program from running again
           isNetflixOn = false;
-          System.out.println("---------------------------------------------");
+          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
           System.out.println("Logging off...");
-          System.out.println("---------------------------------------------");
+          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
       }
     }
   }

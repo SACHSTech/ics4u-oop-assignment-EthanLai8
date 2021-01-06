@@ -72,6 +72,8 @@ public class Show extends Item {
   * @return a String
   */
   public String toString() {
-    return "\n[Show: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + ", Episodes: " + intEpisodes + ", Status: " + strStatus + "]";
+    // return "\n[Show: " + getName() + ", Genre: " + getGenre() + ", Director: " + getDirector() + ", Year Released: " + getYear() + ", Rating: " + getRating() + ", Episodes: " + intEpisodes + ", Status: " + strStatus + "]";
+
+    return String.format("|%10s |", "Show") + String.format("%25s |", getName()) + String.format("%10s |", getGenre()) + String.format("%20s |", getDirector()) + String.format("%10s |", getYear()) + String.format("%10s |", getRating()) + String.format("%10s |", "N/A") + String.format("%10s |", intEpisodes) + String.format("%10s |", strStatus) + "\n";
   }
 }

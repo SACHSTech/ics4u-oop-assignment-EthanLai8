@@ -136,23 +136,23 @@ public class WatchedList {
       // If statements that check which cell has the greatest number. Displays all objects from the database with the same genre as the genre that the greatest cell represents.
       if (intMax == intGenreCount[0]) {
         if(DatabaseItem.getGenre().equalsIgnoreCase("Action")) {
-          System.out.println(DatabaseItem);
+          System.out.print(DatabaseItem);
         }
       } else if (intMax == intGenreCount[1]) {
         if(DatabaseItem.getGenre().equalsIgnoreCase("Comedy")) {
-          System.out.println(DatabaseItem);
+          System.out.print(DatabaseItem);
         }
       } else if (intMax == intGenreCount[2]) {
         if(DatabaseItem.getGenre().equalsIgnoreCase("Horror")) {
-          System.out.println(DatabaseItem);
+          System.out.print(DatabaseItem);
         }
       } else if (intMax == intGenreCount[3]) {
         if(DatabaseItem.getGenre().equalsIgnoreCase("Romance")) {
-          System.out.println(DatabaseItem);
+          System.out.print(DatabaseItem);
         }
       } else if (intMax == intGenreCount[4]) {
         if(DatabaseItem.getGenre().equalsIgnoreCase("Sci-Fi")) {
-          System.out.println(DatabaseItem);
+          System.out.print(DatabaseItem);
         }
       }
     }
