@@ -15,7 +15,7 @@ public class Main {
   * Static method that allows easy formatting for printing strings and numbers.
   *
   * @param strName - a string
-  * @param args - any variable
+  * @param args - any variable argument
   * @return Formatted String
   */
   public static String format(String strFormat, Object... args) {  
