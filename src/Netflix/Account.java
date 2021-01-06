@@ -47,7 +47,7 @@ public class Account {
   }
 
   /**
-  * Getter method that returns the account's watched list as a string
+  * Getter method that returns the account's watched list as a string. Removes all square brackets and commas from the watched list when it is converted to a string.
   *
   * @return String of myList.getWatchedList - a method from WatchedList class. Displays the string version of the arraylist of myList.
   */	
@@ -56,7 +56,7 @@ public class Account {
   }
 
   /**
-  * Setter method that allows the user to modify the username of the account
+  * Setter method that allows the user to modify the username of the account.
   *
   * @param strUsername - a string
   */	
@@ -65,7 +65,7 @@ public class Account {
   }
 
   /**
-  * Setter method that allows the user to modify the password of the account
+  * Setter method that allows the user to modify the password of the account.
   *
   * @param strPassword - a string
   */	
@@ -74,9 +74,9 @@ public class Account {
   }
 
   /**
-  * Setter method that allows the user to modify the myList object
+  * Setter method that allows the user to modify the myList object.
   *
-  * @param myList - an object from the WatchedList {@link ClassNotFoundException}
+  * @param myList - an object from the WatchedList class
   */	
   public void setList(WatchedList myList) {
     this.myList = myList;

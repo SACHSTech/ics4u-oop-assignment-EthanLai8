@@ -20,14 +20,14 @@ public class WatchedList {
   /**
   * WatchedList constructor. Creates an instance of the object, WatchedList. An aggregation of the object, Account.
   *
-  * @param myList - an Arraylist that contains only Item objects
+  * @param myList - an arraylist that contains only Item objects
   */	
   public WatchedList(ArrayList<Item> myList) {
     this.myList = myList;
   }
   
   /**
-  * Getter method that returns the watched list's arraylist contents
+  * Getter method that returns the watched list's arraylist contents.
   *
   * @return myList - an arraylist that contains Item objects
   */	
@@ -36,7 +36,7 @@ public class WatchedList {
   }
 
   /**
-  * Setter method which allows the user to modify the watched list's arraylist
+  * Setter method which allows the user to modify the watched list's arraylist.
   *
   * @param myList - an arraylist that contains Item objects
   */	
@@ -52,11 +52,11 @@ public class WatchedList {
   */	
   public void addingItem(String strUserItemInput, ArrayList<Item> Database) {
 
-    // Intializing instance variables
+    // Intializing instance variables everytime this method is used
     intCheck = 0;
     isItemInList = false;
 
-    // For loop that iterates through the database arraylist
+    // For loop that iterates through the arraylist, Database
     for (Item CurrentItem : Database) {
 
       // If the user input equals to an object in the database, runs another set of programs
@@ -102,7 +102,7 @@ public class WatchedList {
   */	
   public void recommendations(ArrayList<Item> Database) {
 
-    // Intializing instance variables
+    // Intializing instance variables everytime this method is used
     intGenreCount = new int[] {0, 0, 0, 0, 0};
     intMax = intGenreCount[0];
 
@@ -130,7 +130,7 @@ public class WatchedList {
       }
     }
 
-    // For loop that iterates through the database arraylist
+    // For loop that iterates through the arraylist, Database
     for (Item DatabaseItem : Database) {
 
       // If statements that check which cell has the greatest number. Displays all objects from the database with the same genre as the genre that the greatest cell represents.

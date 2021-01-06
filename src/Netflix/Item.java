@@ -36,7 +36,7 @@ public class Item {
   }
 
   /**
-  * Getter method that returns the item's name
+  * Getter method that returns the item's name.
   *
   * @return strName - the name of the item
   */
@@ -45,7 +45,7 @@ public class Item {
   }
 
   /**
-  * Getter method that returns the item's genre
+  * Getter method that returns the item's genre.
   *
   * @return strGenre - the genre of the item
   */
@@ -54,7 +54,7 @@ public class Item {
   }
 
   /**
-  * Getter method that returns the item's director
+  * Getter method that returns the item's director.
   *
   * @return strDirector - the director of the item
   */
@@ -63,7 +63,7 @@ public class Item {
   }
 
   /**
-  * Getter method that returns the item's year
+  * Getter method that returns the item's year.
   *
   * @return intYear - the year of the item
   */
@@ -72,7 +72,7 @@ public class Item {
   }
 
   /**
-  * Getter method that returns the item's rating
+  * Getter method that returns the item's rating.
   *
   * @return dblRating - the rating of the item
   */
@@ -81,7 +81,7 @@ public class Item {
   }
 
   /**
-  * Setter method that allows the user to modify the name of the item
+  * Setter method that allows the user to modify the name of the item.
   *
   * @param strName - a string
   */
@@ -90,7 +90,7 @@ public class Item {
   }
 
   /**
-  * Setter method that allows the user to modify the genre of the item
+  * Setter method that allows the user to modify the genre of the item.
   *
   * @param strGenre - a string
   */
@@ -99,7 +99,7 @@ public class Item {
   }
 
   /**
-  * Setter method that allows the user to modify the director of the item
+  * Setter method that allows the user to modify the director of the item.
   *
   * @param strDirector - a string
   */
@@ -108,7 +108,7 @@ public class Item {
   }
 
   /**
-  * Setter method that allows the user to modify the year of the item
+  * Setter method that allows the user to modify the year of the item.
   *
   * @param intYear - an integer
   */
@@ -117,7 +117,7 @@ public class Item {
   }
 
   /**
-  * Setter method that allows the user to modify the rating of the item
+  * Setter method that allows the user to modify the rating of the item.
   *
   * @param dblRating - a double
   */

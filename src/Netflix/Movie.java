@@ -11,7 +11,7 @@ public class Movie extends Item {
   private int intMinutes;
 
   /**
-  * Movie constructor. Creates an instance of the item, movie. An inheritance of the object, Item.
+  * Movie constructor. Creates an instance of the Item, Movie. An inheritance of the object, Item.
   *
   * @param strName - a string that displays the name of the movie
   * @param strGenre - a string that displays the genre of the movie
@@ -28,7 +28,7 @@ public class Movie extends Item {
   }
 
   /**
-  * Getter method that returns the movie's duration in minutes
+  * Getter method that returns the movie's duration in minutes.
   *
   * @return intDuration - the duration of the movie in minutes
   */
@@ -37,7 +37,7 @@ public class Movie extends Item {
   }
 
   /**
-  * Setter method that allows the user to modify the duration of the movie in minutes
+  * Setter method that allows the user to modify the duration of the movie in minutes.
   *
   * @param intDuration - an integer
   */
@@ -46,7 +46,7 @@ public class Movie extends Item {
   }
 
   /**
-  * Helper method that changes the variable, intDuration, into hours and minutes
+  * Helper method that converts the variable, intDuration, into hours and minutes.
   *
   * @param intDuration - an integer
   * @return String - the duration in hours and minutes

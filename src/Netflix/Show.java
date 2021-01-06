@@ -12,7 +12,7 @@ public class Show extends Item {
   private String strStatus;
 
   /**
-  * Show constructor. Creates an instance of the item, show. An inheritance of the object, Item.
+  * Show constructor. Creates an instance of the Item, Show. An inheritance of the object, Item.
   *
   * @param strName - a string that displays the name of the show
   * @param strGenre - a string that displays the genre of the show
@@ -31,25 +31,25 @@ public class Show extends Item {
   }
 
   /**
-  * Getter method that returns the show's number of episodes
+  * Getter method that returns the show's number of episodes.
   *
-  * @return intEpisodes - the amount of episodes in the show
+  * @return intEpisodes - the amount of episodes in the show which is an integer
   */
   public int getEpisodes() {
     return intEpisodes;
   }
 
   /**
-  * Getter method that returns the show's status
+  * Getter method that returns the show's status.
   *
-  * @return strStatus - the status of the show
+  * @return strStatus - the status of the show which is a string
   */
   public String getStatus() {
     return strStatus;
   }
 
   /**
-  * Setter method that allows the user to modify the episodes of the show
+  * Setter method that allows the user to modify the episodes of the show.
   *
   * @param intEpisodes - an integer
   */
@@ -58,7 +58,7 @@ public class Show extends Item {
   }
 
   /**
-  * Setter method that allows the user to modify the status of the show
+  * Setter method that allows the user to modify the status of the show.
   *
   * @param strStatus - a string
   */

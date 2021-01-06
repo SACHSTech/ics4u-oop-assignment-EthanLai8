@@ -23,7 +23,7 @@ public class Main {
   }
   
   /**
-  * Prints the title.
+  * Static method that prints the title.
   *
   * @return void
   */
@@ -39,7 +39,7 @@ public class Main {
   }  
 
   /**
-  * Prints the log off info.
+  * Static method that prints the log off info.
   *
   * @return void
   */
@@ -50,19 +50,19 @@ public class Main {
   }
 
   /**
-  * Prints the main menu.
+  * Static method that prints the main menu.
   *
   * @return void
   */
   public static void mainmenu() {
     System.out.println("\n--------------------------------------------------------------------------------------------------------------------------------------");
     System.out.println("[My List] [Database] [Recommendations] [Account Details]");
-    System.out.println("\nType the first letter of the desired location to continue (e.g M) \nType anything else to log off");
+    System.out.println("\nType the first letter of the desired location to continue (e.g. M). \nType anything else to log off.");
     System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
   }
 
   /**
-  * Allows the program to pause for a set amount of time.
+  * Static method that allows the program to pause for a set amount of time.
   *
   * @param intSec - the time in seconds that the program pauses for. An integer.
   * @return void
@@ -96,7 +96,7 @@ public class Main {
     isNetflixOn = true;
     strUserInput = "";
 
-    // Title screen
+    // Title screen static method
     title();
 
     // Asking for user input for their account's username and password
@@ -133,7 +133,7 @@ public class Main {
     Item ThePlatform = new Movie("The Platform", "Horror", "Galder Urrutia", 2019, 7.0, 94);
     Item Saw = new Movie("Saw", "Horror", "James Wan", 2004, 7.6, 103);
 
-    // Adding the movie and show objects into an arraylist
+    // Adding the movie and show objects into an Item arraylist
     ArrayList<Item> Database = new ArrayList<>();
     Database.add(StrangerThings);
     Database.add(Berserk);
