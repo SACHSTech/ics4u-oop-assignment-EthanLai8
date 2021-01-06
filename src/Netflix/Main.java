@@ -116,7 +116,7 @@ public class Main {
           // Gets the user's current watched list using a method from the Account class
           System.out.println("\nCurrent Watched List: \n");
           System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
-          System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+          System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
           System.out.println(userAccount.getList());
 
           // While loop that continuously asks the user if they want to add a new item to their list if a boolean is true.
@@ -129,7 +129,7 @@ public class Main {
               isAddingToList = false;
               System.out.println("\nNew Watched List: \n");
               System.out.println(" " + String.format("|%10s |", "Type") + String.format("%25s |", "Title") + String.format("%10s |", "Genre") + String.format("%20s |", "Director") + String.format("%10s |", "Year") + String.format("%10s |", "Rating") + String.format("%10s |", "Duration") + String.format("%10s |", "Episodes") + String.format("%10s |", "Status"));
-              System.out.println("--------------------------------------------------------------------------------------------------------------------------------------");
+              System.out.println(" --------------------------------------------------------------------------------------------------------------------------------------");
               System.out.println(userAccount.getList());
             
             // If the user types anything, it triggers a method from the WatchedList class. This method checks if the user's string matches any object from the database and adds it to the user's watched list.
