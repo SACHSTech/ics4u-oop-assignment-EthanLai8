@@ -143,7 +143,6 @@ public class Main {
     Database.add(CobraKai);
     Database.add(FamilyGuy);
     Database.add(HunterxHunter);
-
     Database.add(Titanic);
     Database.add(StarWars);
     Database.add(FallingDown);
@@ -174,7 +173,6 @@ public class Main {
 
       // Switch statement that detects what the user input is and accesses the user's desired section of the program.
       switch (strUserInput.toLowerCase()) {  
-
         case "m" :
           System.out.println("\nCurrent Watched List: \n");
 
@@ -205,7 +203,6 @@ public class Main {
           }
           sleep(1);
           break;
-
         case "d" :
           System.out.println("\nNetflix Database: \n");
 
@@ -215,7 +212,6 @@ public class Main {
           System.out.println(StringDatabase);
           sleep(1);
           break;
-
         case "r" :
           System.out.println("\nYour Recommendations (Based on common genres from your list):\n");
 
@@ -225,7 +221,6 @@ public class Main {
           UserList.recommendations(Database);
           sleep(1);
           break;
-
         case "a" :
           System.out.println("");
 
@@ -250,8 +245,7 @@ public class Main {
             // Triggers a method from the Account class which sets the account's password as a new password
             userAccount.setPassword(strUserChangedPass);
           }
-          break;
-        
+          break; 
         default :
 
           // Turns a boolean off which prevents the program from running again
